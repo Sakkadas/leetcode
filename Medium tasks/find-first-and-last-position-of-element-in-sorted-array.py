@@ -20,7 +20,7 @@ Output: [-1,-1]
 
 
 class Solution:
-    def searchRange(self, nums: List[int], target: int) -> List[int]:
+    def searchRange(self, nums, target):
         if target not in nums:
             return [-1, -1]
         i = nums.index(target)
@@ -30,3 +30,8 @@ class Solution:
                 break
             j = num
         return [i, j]
+
+
+if __name__ == "__main__":
+    s = Solution()
+    print(s.searchRange([5, 7, 7, 8, 8, 10], 8))
